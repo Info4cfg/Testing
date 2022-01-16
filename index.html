@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+var arr = []
+
+
+function actionSave(){
+    var input = document.getElementById("uname").value;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === input) {
+            return alert("Уже, виделись " + input);
+        }
+    }  alert("Привет, " + input); 
+    return  arr.push(input);
+}
+
+
+
+function showDisplay() {
+    document.getElementById("arr").innerHTML = arr.join(", ");  
+}
+
+
+    </script>
+</head>
+<body>
+<form>
+    <div>
+      <label form="special">Choose a username: </label>
+      <input type="text" id="uname">
+      <button onclick="actionSave();" type="button">Save me!</button>
+      <button onclick="showDisplay();" type="button">Show me!</button>
+    </div>
+  </form>
+  <div id="arr"></div>
+</body>
+</html>
